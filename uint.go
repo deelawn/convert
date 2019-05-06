@@ -98,7 +98,7 @@ func UintToInt64(value uint64) (int64, error) {
 
 	result := int64(value)
 
-	// Need to explicity check against min/max values because comparing an int64 to uint64
+	// Need to explicitly check against min/max values because comparing an int64 to uint64
 	// with the same bits will have equal values if casting the int64 to uint64 to do the comparison.
 	if uint64(result) != value || value > uint64(math.MaxInt64) {
 		return result, errors.New(lossOfPrecisionErrorMsg)
