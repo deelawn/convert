@@ -9,3 +9,5 @@ script:
   - go test
   - go vet
   - diff -u <(echo -n) <(golint ./...)
+after_success:
+  - ./scripts/coverage.sh

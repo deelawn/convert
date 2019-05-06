@@ -47,7 +47,7 @@ func UintToInt(value uint64) (int, error) {
 
 	result := int(value)
 
-	// Need to explicity check against min/max values because comparing an int64 to uint64
+	// Need to explicitly check against min/max values because comparing an int64 to uint64
 	// with the same bits will have equal values if casting the int to uint64 to do the comparison.
 	if uint64(result) != value || (strconv.IntSize == 64 && value > uint64(math.MaxInt64)) ||
 		(strconv.IntSize == 32 && value > uint64(math.MaxInt32)) {
