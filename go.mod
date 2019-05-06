@@ -1,4 +1,4 @@
-module convert
+module github.com/deelawn/convert
 
 go 1.12
 
